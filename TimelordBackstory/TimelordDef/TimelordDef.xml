@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<def>
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>timelord</defName>
+		<label>Timelord</label>
+		<description>Upper class of the denizens of Galifrey.</description>
+	</AlienRace.ThingDef_AlienRace>
+	
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>timelord</defName>
+		<label>Timelrord</label>
+		<description>Upper class of the denizens of Galifrey.</description>
+		<alienRace>
+			<generalSettings>
+
+			</generalSettings>
+			<graphicPaths>
+
+			</graphicPaths>
+			<hairSettings>
+
+			</hairSettings>
+			<pawnKindSettings>
+
+			</pawnKindSettings>
+			<thoughtSettings>
+
+			</thoughtSettings>
+			<relationSettings>
+
+			</relationSettings>
+			<raceRestriction>
+
+			</raceRestriction>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+	
+	<generalSettings>
+		<maleGenderProbability>0.5</maleGenderProbability>
+		<immuneToAge>true</immuneToAge>
+		<disallowedTraits>
+			<li>Cannibal</li>
+		</disallowedTraits>
+		<allowHumanBios>true</allowHumanBios>
+		<humanRecipeImport>true</humanRecipeImport>
+	</generalSettings>
+	
+	<thoughtSettings>
+		<cannotReceiveThoughts>
+			<li>Disturbed sleep</li>
+		</cannotReceiveThoughts>
+		<ateThoughtGeneral>
+			<thought>AteHumanlikeMeatDirect</thought>
+			<ingredientThought>AteHumanlikeMeatAsIngredient</ingredientThought>
+		</ateThoughtGeneral>
+		<butcherThoughtGeneral>
+			<thought>ButcheredHumanlikeCorpse</thought>
+			<knowThought>KnowButcheredHumanlikeCorpse</knowThought>
+		</butcherThoughtGeneral>		
+	</thoughtSettings>
+	
+	<PawnKindDef>
+		<defName>timelordpawn</def>
+		<label>Timelord</label>
+		<race>timelord</race>
+		<backstoryCatagories>
+			<li>timelordbackstory</li>
+		</backstoryCatagories>
+	</PawnKindDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>timelesschild</defName>
+		<title>The Timeless Child</title>
+		<titleShort>The Timeless Child</titleShort>
+		<baseDescription>[PAWN_nameDef] was found alone under a gate to an unknown dimension. Located on an abandoned planet [PAWN_pronounDef] was taken back to Galifrey.</baseDescription>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>timelordpawn</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Crafting</defName>
+				<amount>3</amount>
+			</li>
+		<skillGains>
+		<forcedTraits>
+			<li>
+				<defName>TooSmart</defName>
+			</li>
+			<li>
+				<defName>FastLearner</defName>
+			</li>
+			<li>
+				<defName>GreatMemory</defName>
+			</li>
+			<li>
+				<defName>QuickSleeper</defName>
+			</li>
+			<li>
+				<defName>FastLearner</defName>
+			</li>
+		</forcedTraits>
+		<linkedBackstory>timelordbackstory</linkedBackstory>			
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.BackstoryDef>
+		<defName>timelordbackstory</defName>
+		<title>Timelord of Galifrey</title>
+		<titleShort>Timelord</titleShort>
+		<baseDescription>[PAWN_nameDef] is a denizen of the ruling class of Galifrey. Granted the ability to regenerate at the cost of a childhood. At the age of 8 [PAWN_pronounDef] was taken to the Untempered Schism to look the whole of the void. Only [PAWN_pronounDef] can tell you what happened next.</baseDescription>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>timelordpawn</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<defName>Intellectual</defName>
+				<amount>5</amount>
+			</li>
+			<li>
+				<defName>Construction</defName>
+				<amount>5</amount>
+			</li>
+		<skillGains>
+		<forcedTraits>
+			</li>
+			<li>
+				<defName>QuickSleeper</defName>
+			</li>
+			<li>
+				<defName>FastLearner</defName>
+			</li>
+		</forcedTraits>
+		<bioAgeRange>
+			<max>30</max>
+		</bioAgeRange>
+		<chronoAgeRange>
+			<min>3199</min>
+		</chronoAgeRange>
+	</AlienRace.BackstoryDef>
+	
+	<AlienRace.PawnBioDef>
+		<defName>timelordpawntest</defName>
+		<childhoodDef>timelesschild</childhoodDef>
+		<adulthoodDef>timelordbackstory</adulthoodDef>
+		<gender>Either</gender>
+		<name>
+			<first>Evan</first>
+			<last>Crocker</last>
+			<nick>Doctor</nick>
+		</name>
+		<factionLeader>false</factionLeader>
+		<validRaces>
+			<li>Human</li>
+			<li>timelord</li>
+		</validRaces>
+	</AlienRace.PawnBioDef>
+	
+</def>
